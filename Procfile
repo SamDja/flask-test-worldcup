@@ -1,1 +1,1 @@
-web: python mondiali.py
+web: gunicorn mondiali:app
