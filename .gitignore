@@ -1,1 +1,5 @@
+# Removing the environment folder
 flask/
+
+# Removing settings for the editor
+.vscode/
