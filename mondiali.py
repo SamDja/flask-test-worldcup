@@ -1,4 +1,5 @@
 from flask import Flask, render_template, send_from_directory, request
+from random import randint
 app = Flask(__name__)
 teams = [
     ('russia','Russia'),
@@ -15,8 +16,14 @@ def index():
 
 @app.route('/', methods=['POST'])
 def index_form():
-    select = request.form.get('first_team')
-    return str(select)
+    team1 = request.form.get('first_team')
+    team2 = request.form.get('second_team')
+
+    winning_team = team1
+    if randint(0,1):
+        winning_team = team2
+
+    return render_template('index.html', winning_team=str(winning_team))
 
 @app.route('/css/<path:path>')
 def serve_css(path):

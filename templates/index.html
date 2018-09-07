@@ -13,21 +13,25 @@
         <h1>Mondiali Russia 2k18</h1>
         <div class="form-container">
 
-            <form method="POST">
-                <select name="first_team">
-                    {% for team in teams %}
-                    <option value="{{ team[0] }}">{{ team[1] }}</option>
-                    {% endfor %}
-                </select>
+            {% if teams %}
+                <form method="POST">
+                    <select name="first_team">
+                        {% for team in teams %}
+                        <option value="{{ team[0] }}">{{ team[1] }}</option>
+                        {% endfor %}
+                    </select>
 
-                <select name="second_team">
-                    {% for team in teams %}
-                    <option value="{{ team[0] }}">{{ team[1] }}</option>
-                    {% endfor %}
-                </select>
+                    <select name="second_team">
+                        {% for team in teams %}
+                        <option value="{{ team[0] }}">{{ team[1] }}</option>
+                        {% endfor %}
+                    </select>
 
-                <button type="submit">Chi vince?</button>
-            </form>
+                    <button type="submit">Chi vince?</button>
+                </form>
+            {% elif winning_team %}
+                <h1>The winner is {{ winning_team }}</h1>
+            {% endif %}
         </div>
     </div>
 </body>
