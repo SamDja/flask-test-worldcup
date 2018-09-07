@@ -1,10 +1,3 @@
-
-@font-face {
-    font-family: 'NikeFont';
-    src: url('../fonts/Nike\ Total\ 90.ttf'); /* IE9 Compat Modes */
-    src: url('webfont.eot?#iefix') format('truetype')
-}
-
 h1 {
     font-size: 5em;
     margin-top: 0px;
@@ -15,7 +8,7 @@ h2 {
 }
 
 html,body {
-    font-family: 'NikeFont';
+    font-family: 'Kanit', sans-serif;
     margin: 0;
     padding: 0;
     border: 0;
