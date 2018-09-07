@@ -1,0 +1,42 @@
+
+h1 {
+    font-size: 5em;
+    margin-top: 0px;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 48px;
+    border-radius: 16px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form select {
+    min-height: 24px;
+    min-width: 72px;
+}
