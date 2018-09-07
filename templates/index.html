@@ -30,7 +30,7 @@
                     <button type="submit">Chi vince?</button>
                 </form>
             {% elif winning_team %}
-                <h1>The winner is {{ winning_team }}</h1>
+                <h2>The winner is <span id="winner">{{ winning_team }}</span></h2>
             {% endif %}
         </div>
     </div>
